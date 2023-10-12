@@ -6,7 +6,8 @@ namespace Labb5_OOP
     {
         static void Main(string[] args)
         {
-            Circle circle1 = new Circle(5); //creates object circle1, gives it int-value 5 (the radius of the circle)
+            // instance of class Circle/ creates object circle1 
+            Circle circle1 = new Circle(5); //int-value 5 in parameter (the radius of the circle)
             circle1.GetAreaCircle(); //calls for GetAreaCircle method and implements it on circle1
 
             Console.WriteLine();
@@ -21,7 +22,7 @@ namespace Labb5_OOP
             circle2.GetAreaSphere();
             Console.WriteLine();
 
-            Triangle triangle1 = new Triangle(5, 7); // triangle1 has the height of 5 (cm) and width of 7 (cm)
+            Triangle triangle1 = new Triangle(5, 7); // triangle1 height: 5 cm, and width: 7 cm
             triangle1.GetAreaTriangle();
         }
     }
