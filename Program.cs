@@ -16,6 +16,7 @@ namespace Labb5_OOP
             circle2.GetAreaCircle();
 
             circle2.GetCircumferenceCircle();
+            Console.WriteLine();
 
             circle2.GetVolumeSphere();
 

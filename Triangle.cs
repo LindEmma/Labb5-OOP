@@ -54,9 +54,9 @@
         }
         public void GetAreaTriangle() //method to get the area of a triangle
         {
-            float area = (_height * _width) / 2; //how to calculate the area of a triangle
+            double area = (_height * _width) / 2; //how to calculate the area of a triangle
 
-            Console.WriteLine("En triangel med höjden " + _height + "cm och bredden " + _width + "cm har arean: " + Math.Round(area, 1) + "cm².");
+            Console.WriteLine("En triangel med höjden " + _height + "cm och bredden " + _width + "cm har arean: " + Math.Round(area, 2) + "cm².");
         }
     }
 }

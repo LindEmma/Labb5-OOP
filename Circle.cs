@@ -14,7 +14,7 @@
         }
 
         // instance constructor with one parameter (int radius)
-        public Circle(int radius) 
+        public Circle(double radius) 
         {
             _pi = Math.PI;
             Radius = radius;
@@ -39,30 +39,30 @@
         //method to get area of a circle
         public void GetAreaCircle()
         {
-            double area = _radius * _radius * _pi;
-            // Math.Round(area,1) round up the number to one decimal
-            Console.WriteLine("Arean av en cirkel med " + _radius + " cm i radie är: " + Math.Round(area, 1) + "cm².");
+            double area = _pi * (Math.Pow(_radius, 2));
+            // Math.Round(area,2) round the number to two decimals
+            Console.WriteLine("Arean av en cirkel med " + _radius + "cm i radie är: " + Math.Round(area, 2) + "cm².");
         }
 
         //method to get circumference of a circle
         public void GetCircumferenceCircle()
         {
-            double circumference = (_radius * 2) * _pi;
-            Console.WriteLine("Omkretsen av en cirkel med " + _radius + "cm i radie är: " + Math.Round(circumference, 1) + "cm.");
+            double circumference = _radius * 2 * _pi;
+            Console.WriteLine("Omkretsen av en cirkel med " + _radius + "cm i radie är: " + Math.Round(circumference, 2) + "cm.");
         }
 
         //method to get area of a sphere
         public void GetAreaSphere()
         {// Math.Pow() is to calculate the power of, or in this case the square of, _radius.
-            double area = 4 * _pi * (Math.Pow(_radius, 2));
-            Console.WriteLine("Arean av en sfär med " + _radius + "cm i radie är: " + Math.Round(area, 1) + "cm².");
+            double area = 4.0 * _pi * (Math.Pow(_radius, 2));
+            Console.WriteLine("Arean av en sfär med " + _radius + "cm i radie är: " + Math.Round(area, 2) + "cm².");
         }
 
         //method to get volume of a sphere
         public void GetVolumeSphere()
         {
-            double volume = 4 * _pi * (Math.Pow(_radius, 3)) / 3;
-            Console.WriteLine("Volymen av en sfär med " + _radius + " cm i radie är: " + Math.Round(volume, 1) + "ml.");
+            double volume = (4.0/3.0) * _pi * Math.Pow(_radius, 3);
+            Console.WriteLine("Volymen av en sfär med " + _radius + "cm i radie är: " + Math.Round(volume, 2) + "ml.");
         }
     }
 }
