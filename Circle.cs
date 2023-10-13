@@ -1,11 +1,10 @@
 ﻿namespace Labb5_OOP
 {
-    public class Circle
+    class Circle
     {
         //field variables
         private double _pi;
-        private int _radius { get; set; }
-      
+        private double _radius;
 
         //default constructor
         public Circle()
@@ -15,18 +14,34 @@
         }
 
         // instance constructor with one parameter (int radius)
-        public Circle(int radius) //constructor
+        public Circle(int radius) 
         {
             _pi = Math.PI;
-            _radius = radius;
+            Radius = radius;
         }
 
-        //method to get area from a circle
+        // get/set that change value of Radius to 0 if it's a negative number (must be positive).
+        public double Radius
+        {
+            get { return _radius; }
+            set
+            {
+                if (value > 0)
+                {
+                    _radius = value;
+                }
+                else
+                {
+                    _radius = 0;
+                }
+            }
+        }
+        //method to get area of a circle
         public void GetAreaCircle()
         {
             double area = _radius * _radius * _pi;
             // Math.Round(area,1) round up the number to one decimal
-            Console.WriteLine("Arean av en cirkel med " + _radius + " cm i radie är: " + Math.Round(area, 1) + "cm²."); 
+            Console.WriteLine("Arean av en cirkel med " + _radius + " cm i radie är: " + Math.Round(area, 1) + "cm².");
         }
 
         //method to get circumference of a circle
@@ -39,7 +54,7 @@
         //method to get area of a sphere
         public void GetAreaSphere()
         {// Math.Pow() is to calculate the power of, or in this case the square of, _radius.
-            double area = 4 * _pi * (Math.Pow(_radius, 2)); 
+            double area = 4 * _pi * (Math.Pow(_radius, 2));
             Console.WriteLine("Arean av en sfär med " + _radius + "cm i radie är: " + Math.Round(area, 1) + "cm².");
         }
 

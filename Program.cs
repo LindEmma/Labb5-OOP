@@ -21,9 +21,12 @@ namespace Labb5_OOP
 
             circle2.GetAreaSphere();
             Console.WriteLine();
-
-            Triangle triangle1 = new Triangle(5, 7); // triangle1 height: 5 cm, and width: 7 cm
+            
+            Triangle triangle1 = new Triangle(5.75f, 7.5f); // triangle1 height: 5,75 cm, and width: 7,5 cm
             triangle1.GetAreaTriangle();
+
+
+            
         }
     }
 }
